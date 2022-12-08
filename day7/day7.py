@@ -15,6 +15,7 @@ data.pop(0)
 current_node = Node(name="/", dirs=dict(), files=list(), last_node=None)
 original_node = current_node
 
+#Data mapping
 for datum in data:
     datum = datum.split(" ")
     if len(datum) == 2:
@@ -31,6 +32,7 @@ for datum in data:
 
 nodes_size = list()
 
+# Get sizes of all nodes
 def get_nodes_sizes(nodes_size: list, node: Node):
     size = 0
     if len(node._dirs) == 0:
